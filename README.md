@@ -10,21 +10,21 @@ In this project, we go through the various tasks and steps to operationalize Mac
 6. Creating pipeline to automate the whole process
 
 
-##Architectural Diagram
+## Architectural Diagram
 
 ![process](./images/process.png)
 
 
 
 
-##How to improve the project in the future
+## How to improve the project in the future
 
 
 
-##Tasks/Topics Covered:
+## Tasks/Topics Covered:
 
 
-###Authentication
+### Authentication
 
 In this task, we create a service principal **ml-auth** and give the service princpal the role of owner:
 
@@ -58,7 +58,7 @@ az ml workspace share -w azure-ml-nd-ws -g azure-ml-nd --user xxxxxxxx-5a2a-4309
 ![authentication](./images/authentication.png)
 
 
-###AutoML Experiment
+### AutoML Experiment
 
 In this task, we create a new Automated ML run: Steps involved are as below:
 
@@ -81,7 +81,7 @@ Best Model of the run: VotingEnsemble
 ![best model](./images/best_model.png)
 
 
-###Deploying the Model
+### Deploying the Model
 
 Follow the following steps to deploy the model:
 
@@ -93,7 +93,7 @@ Deployment can be visible in Endpoints:
 
 ![deployment](./images/deployment.png)
 
-###Logging and enabling application insights
+### Logging and enabling application insights
 
 Follow the following steps to see logs for the endpoint and to enable application insights:
 
@@ -114,7 +114,7 @@ Application Insights enabled:
 
 ![app insights](./images/app_insights.png)
 
-###Swagger Documentation
+### Swagger Documentation
 
 In this task, we show the documentation of the HTTP API of the model via swagger. Follow the below steps:
 
@@ -135,7 +135,7 @@ Swagger Documention of the HTTP API:
 ![swagger](./images/swagger.png)
 
 
-###Consuming and Benchmarking the Model Endpoints
+### Consuming and Benchmarking the Model Endpoints
 
 In this task, we are going to consume and benchmark the endpoint:
 
