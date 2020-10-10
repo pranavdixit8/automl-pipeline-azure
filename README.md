@@ -202,7 +202,7 @@ Pipeline Rest Endpoint Run:
 
 ## Screen Recording
 
-Please follow the link for the screen cast: [Operationalizing Azure ML](https://youtu.be/6xIria_vp6E)
+Please follow the link for the screen cast: [Operationalizing Azure ML](https://youtu.be/6xIria_vp6E){:target="_blank"}
 
 
 
