@@ -1,5 +1,5 @@
 ## Overview
-In this project, we go through the various tasks and steps to operationalize Machine Learning Pipeline in Azure. The steps involved are:
+In this project, we go through the various tasks and steps to operationalize Machine Learning in Azure. The steps involved are:
 
 1. Authentication
 2. Defining your Machine Learning Model
@@ -11,6 +11,8 @@ In this project, we go through the various tasks and steps to operationalize Mac
 
 
 ##Architectural Diagram
+
+![process](./images/process.png)
 
 
 
@@ -88,6 +90,7 @@ Follow the following steps to deploy the model:
 - Name the deployment, and choose the compute type. We have used the compute type as Azure Container Service and enabled authentication.
 
 Deployment can be visible in Endpoints:
+
 ![deployment](./images/deployment.png)
 
 ###Logging and enabling application insights
@@ -101,17 +104,93 @@ Follow the following steps to see logs for the endpoint and to enable applicatio
 python logs.py
 
 ```
+
+
 Logs:
+
 ![logs](./images/logs.png)
 
 Application Insights enabled:
+
 ![app insights](./images/app_insights.png)
 
 ###Swagger Documentation
 
-###Consuimg Model Endpoints
+In this task, we show the documentation of the HTTP API of the model via swagger. Follow the below steps:
+
+- Download the swagger.json file from the endpoint
+- Run swagger.sh script to run the SwaggerUI using Docker.( Update the port for Swagger UI if port 80 is not available)
+```
+bash swagger.sh
+```
+- Run serve.py to enable the current folder as the web server.
+```
+python serve
+
+```
+
+
+Swagger Documention of the HTTP API:
+
+![swagger](./images/swagger.png)
+
+
+###Consuming and Benchmarking the Model Endpoints
+
+In this task, we are going to consume and benchmark the endpoint:
+
+- Choose the endpoint and click on **Consume** tab of the endpoint page
+- Note the REST endpoint and primary or the secondary key to interact with it
+- Update the endpoint.py file with the scoring_uri and key value from above
+- Run endpoint.py
+
+```
+python endpoint.py
+```
+![endpoint](./images/endpoint.png)
+- We benchmark the endpoint using Apache Benchmark(make sure you have the Apache Benchmark CLI installed). 
+- Update the benchmark.py file with the REST endpoint and key
+- Run benchmark.sh
+
+```
+bash benchmark.sh
+```
+![benchmark1](./images/benchmark1.png)
+![benchmark2](./images/benchmark2.png)
 
 ### Create, Publish and Consume a Pipeline
+
+Here we create, publish and consume a pipeline using Azure SDK
+
+- Update the notebook: **aml-pipelines-with-automated-machine-learning-step.ipynb** with the experiments, compute target, datasets of your workspace
+- Run all the cells in the notebook
+
+Pipeline Created:
+
+![pipeline created](./images/pipeline_run.png)
+
+Pipeline Endpoint Created:
+
+![pipeline endpoint](./images/pipeline_endpoint.png)
+
+Pipeline Graph:
+
+![pipeline graph](./images/pipeline_graph.png)
+
+Published Pipleline Overview:
+
+![pipeline overview](./images/pipeline_overview.png)
+
+RunDetails Widget:
+
+![run details](./images/run_details.png)
+
+Pipeline Rest Endpoint Run:
+
+![pipeline rest endpoint](./images/pipeline_rest_endpoint.png)
+
+
+
 
 
 
