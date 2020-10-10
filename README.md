@@ -200,6 +200,10 @@ Pipeline Rest Endpoint Run:
 
 ![pipeline rest endpoint](./images/pipeline_rest_endpoint.png)
 
+## Screen Recording
+
+Please follow the link for the screen cast: [Operationalizing Azure ML](https://youtu.be/nEMkFc-C1dE)
+
 
 
 
