@@ -14,11 +14,22 @@ In this project, we go through the various tasks and steps to operationalize Mac
 
 ![process](./images/process.png)
 
+- **Automated ML Run**
+    - Define the Run
+    - Deploy the best model of the run
+    - Consume the endpoint of the deployed model
+
+- **Pipeline Automation using SDK**
+    - We discuss the pipeline automation using Azure SDK
+
 
 
 
 ## How to improve the project in the future
 
+In the project, we show how to create a service principal and assign a role to it independently. We can create a use case of using service principal in the process of pipeline automation.
+
+In the future, we can demostrate the use of Parallel Run Step in the pipeline.
 
 
 ## Tasks/Topics Covered:
